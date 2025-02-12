@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta xd</title>
+</head>
+<style>
+    body {
+        background-color: pink;
+        justify-content: center;
+        text-align: center;
+    }
+        /* Estilos para el botón de "No" */
+        #btnNo {
+        font-size: 24px; /* Aumenta el tamaño de la fuente */
+        color: white; /* Color del texto blanco */
+        background-color: red; /* Fondo rojo */
+        border: none;
+        padding: 10px 20px; /* Añade algo de relleno al botón */
+        border-radius: 8px; /* Bordes redondeados */
+        cursor: pointer;
+    }
+
+    .swal2-styled.swal2-confirm {
+        background-color: #ff0000 !important;
+    }
+
+    .swal2-styled.swal2-confirm:focus {
+        box-shadow: 0 0 0 3px rgba(243, 0, 0, 0.5) !important;
+    }
+</style>
+<script>
+    function dijoquesi() {
+        Swal.fire({
+            title: 'Es bueno que lo tengas en claro mi amor😎💘',
+            confirmButtonText: 'Pedir perdón por dudarlo',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            }
+        })
+    }
+    function mueveelboton() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+
+        newwidth = (Math.random() * width);
+
+        newheight = (Math.random() * height);
+
+        document.getElementById('btnNo').style.position = "absolute";
+        document.getElementById('btnNo').style.left = newwidth + "px";
+        document.getElementById('btnNo').style.top = newheight + "px";
+
+    }
+</script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<body>
+    <h3>¿Que es mas rico Julio o la salchipapa??</h3>
+    <button type="button" onclick="dijoquesi()" id="btnSi">Julio</button>
+    <input type="button" onmousemove="mueveelboton()" id="btnNo" value="Salchipapa">
+
+
+</body>
+
+</html>
